@@ -48,8 +48,8 @@ name: Dev Pipeline
 on:
   push:
     branches-ignore:
-      - main
-      - test
+      - master
+      
 
 jobs:
   dev:
@@ -61,5 +61,5 @@ jobs:
 
       - name: Dev step
         run: |
-          echo "Branch: ${{ REGION }}"
+          echo "Branch: ${{ github.ref_name }}"
           echo "Running DEV pipeline"
