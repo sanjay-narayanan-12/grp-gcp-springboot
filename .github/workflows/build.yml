@@ -47,9 +47,7 @@ name: Dev Pipeline
 
 on:
   push:
-    branches-ignore:
-      - main
-      - test
+     branches: ["master"]
 
 jobs:
   dev:
